@@ -1,0 +1,159 @@
+body{
+    font-family: Arial, Helvetica, sans-serif;
+    margin: 0;
+    padding: 0;
+
+
+}
+
+header{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #333;
+    padding:1rem;
+}
+
+header .logo{
+    color: #fff;
+    font-size: 1.5rem;
+
+}
+
+header nav ul{
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+}
+
+header nav ul li{
+    margin: 0 1rem;
+
+
+}
+
+header nav ul li a {
+    color: #fff ;
+    text-decoration: none;
+    font-size: 1rem;
+}
+
+main{
+
+    padding: 1rem;
+
+}
+
+footer{
+
+    background-color: #333;
+    color: #fff;
+    text-align: center;
+    padding: 1rem;
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+}
+
+@media(max-width:768px){
+    header nav ul{
+        flex-direction: column;
+        align-items: center;
+    }
+
+    header nav ul li{
+        margin: 0.5rem 0;
+    }
+}
+
+.calendar{
+    width: 90%;
+    max-width: 800px;
+    background: #fff;
+    padding: 20px;
+    border: 10px;
+    box-shadow: 0 0 10px rgb(0, 0, 0,0.1);
+}
+
+.month{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.weekdays, .days{
+    display: grid;
+    grid-template-columns: repeat(7,1fr);
+    gap: 10px;
+}
+
+.weekdays div, .days div{
+    text-align: center;
+    padding: 10px;
+}
+
+.days div{
+    background: #f4f4f4;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.modal{
+    display: none;
+    position: fixed;
+    z-index: 1;
+    left: 0;
+    top: 0;
+width: 100%;
+height: 100%;
+overflow: auto;
+background-color: rgb(0,0,0);
+    background-color: rgba(0,0,0,0.4);
+    padding-top: 60px;
+}
+
+.modal-content{
+    background-color: #fefefe;
+    margin: 5% auto;
+    padding: 20px;
+    border: 1px solid#888;
+    width: 80%;
+    max-width: 400px;
+}
+
+.close{
+    color:#aaa;
+    float: right;
+    font-size: 28px;
+    font-weight: bold;
+}
+
+.closer:hover, .close:focus {
+    color: black;
+    text-decoration: none;
+    cursor: pointer;
+}
+
+.button{
+    background-color: #25D366; /* Cor verde do WhatsApp */
+    border: none;
+    color: white;
+    padding: 15px 32px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    margin: 4px 2px;
+    cursor: pointer;
+    border-radius: 25px; /* Bordas arredondadas */
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19); /* Sombra */
+    transition: 0.3s; /* Transição para o hover */
+}
+
+.img{
+
+
+   object-fit: cover;
+   width: 100px;
+   height: 100px;
+}

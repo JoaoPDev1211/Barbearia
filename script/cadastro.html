@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cadastro de Cartão</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f4f4f4;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+        }
+        .card-form {
+            background: #fff;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            max-width: 400px;
+            width: 100%;
+        }
+        .card-form h2 {
+            margin-bottom: 20px;
+        }
+        .form-group {
+            margin-bottom: 15px;
+        }
+        .form-group label {
+            display: block;
+            margin-bottom: 5px;
+        }
+        .form-group input {
+            width: 100%;
+            padding: 10px;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+        }
+        .form-group input[type="submit"] {
+            background-color: #28a745;
+            color: #fff;
+            border: none;
+            cursor: pointer;
+        }
+        .form-group input[type="submit"]:hover {
+            background-color: #218838;
+        }
+    </style>
+</head>
+<body>
+
+    <form class="card-form">
+        <h2>Cadastro de Cartão</h2>
+        <div class="form-group">
+            <label for="card-name">Nome no Cartão</label>
+            <input type="text" id="card-name" name="card-name" required>
+        </div>
+        <div class="form-group">
+            <label for="card-number">Número do Cartão</label>
+            <input type="text" id="card-number" name="card-number" required pattern="\d{16}" title="Por favor, insira um número de cartão válido com 16 dígitos">
+        </div>
+        <div class="form-group">
+            <label for="expiry-date">Data de Validade</label>
+            <input type="month" id="expiry-date" name="expiry-date" required>
+        </div>
+        <div class="form-group">
+            <label for="cvv">CVV</label>
+            <input type="text" id="cvv" name="cvv" required pattern="\d{3}" title="Por favor, insira um CVV válido com 3 dígitos">
+        </div>
+        <div class="form-group">
+            <input type="submit" value="Cadastrar">
+        </div>
+    </form>
+
+</body>
+</html>
